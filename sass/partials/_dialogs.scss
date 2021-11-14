@@ -1,0 +1,546 @@
+.dropdown-menu {
+    font-size: 1em;
+    box-sizing: border-box;
+    z-index: 1000;
+    max-width: 460px;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    background-color: white;
+    color: $color_text;
+    box-shadow: 0 0 0 1px rgba(black,0.1), 0 3px 10px 0 rgba(black,0.2);
+    @include transition(all .6s ease-in-out);
+    -webkit-animation: panel-slide-down .6s ease-in-out forwards;
+    animation: panel-slide-down .6s ease-in-out forwards;
+    overflow: hidden;
+    border: none;
+
+    &.profile_dropdown {
+        min-width: 240px;
+    }
+
+    .mainAppHeader & {
+        color: $brand_inverse;
+        background-color: black;
+        border-radius: 0 0 5px 5px;
+    }
+
+    &.subMenu {
+        @include MQ-MAX(M) {
+            width: 100%;
+        }
+    }
+    
+    &.show {
+        visibility: visible;
+    }
+
+    li {
+        display: block;
+        padding: 0;
+        margin:0;
+
+        > *, > a {
+            padding: 10px 15px;
+            display: flex;
+            width: 100%;
+            font-size: 14px;
+            text-transform: capitalize;
+            line-height: normal;
+            align-items: center;
+            white-space: nowrap;
+
+            &:hover {
+                background: $brand_inverse;
+                color: $brand_primary;
+            }
+        }
+    }
+}
+
+@keyframes panel-slide-down{
+    0%,30% { 
+        margin-top:-15px;
+        opacity:0
+    }
+    to {
+        margin-top:0;
+        opacity:1
+    }
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.tooltip .arrow::before {
+    border-top-color: $brand_black !important;
+}
+
+.tooltip-inner {
+    font-size: 12px;
+    background-color: $brand_black;
+    border-radius: 5px;
+    padding: 6px 12px;
+}
+
+.caret {
+    display: inline-flex;
+    margin-left: 10px;
+
+    &:after {
+        vertical-align: .255em;
+        content: "";
+        border-top: .4em solid;
+        border-right: .35em solid transparent;
+        border-bottom: 0;
+        border-left: .35em solid transparent
+    }
+}
+
+.modal-backdrop {
+    background-color: rgba(black, .9);
+    display: none;
+}
+
+.modal-content {
+    border-radius: 15px;
+}
+
+.modal-dialog {
+    z-index: 2000;
+    max-width: 520px;
+
+    @include MQ-MAX(M) {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
+@include MQ(L) {
+    .modal-sm {
+        max-width: 420px;
+    }
+
+    .modal-md {
+        max-width: 620px;
+    }
+
+    .modal-lg {
+        max-width: 970px;
+    }
+
+    .modal-xl {
+        max-width: 1170px;
+    }
+}
+
+.modal {
+    z-index: 3000;
+
+    .modal-open & {
+        background-color: rgba(black, .9);
+        padding: none !important;
+    }
+
+    .modal-header {
+        border-bottom: none;
+        padding: 20px 15px 0;
+        justify-content: flex-start;
+        
+        &.widgetBannerHeader {
+            padding-bottom: 20px;
+        }
+
+        @include MQ(M) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
+    .modal-body {
+        position: relative;
+        padding: 30px 15px;
+
+        @include MQ(M) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    
+    .modal-footer {
+        border-top: none;
+        padding: 0 15px 10px;
+    }
+}
+
+.modal-title {
+    font-size: 1.85rem;
+    font-weight: 900;
+    font-family: $header_font;
+    font-style: italic;
+}
+
+.sectionDialogWrapper {
+    height: 720px;
+}
+
+.sectionDialogFooter, .sectionDialogHeader {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    left: 0;
+    @include flexbox();
+    padding: 10px 15px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+    @include MQ(M) {
+        padding: 15px 30px;
+    }
+}
+
+.sectionDialogHeader {
+    top: 0;
+    box-shadow: 0px 1px 10px rgba(black, 0.15);
+}
+
+.sectionDialogFooter {
+    bottom: 0;
+}
+
+.sectionDialogBody {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.dialogSideBar {
+    background-color: $brand_inverse; 
+    display: none;
+    
+    @include MQ(M) {
+        width: 30%;
+        left: 0;
+        height: 100%;
+        position: absolute;
+        display: block;
+    }
+}
+
+.dialogContentMain {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    @include MQ(M) {
+        padding-left: 30%;
+    }
+}
+
+.dialogSideBar, .dialogContentMain  {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.dialogContentInner, .sidebarNav {
+    padding: 30px 20px;
+    
+    @include MQ(M) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.sidebarNav {
+    @include MQ(M) {
+        padding-right: 15px;
+    }
+}
+
+.promptImageHolder {
+    max-width: 96px;
+    display: block;
+    margin-bottom: 20px;
+
+    > img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.widgetBannerHeader {
+    background-color: $brand_inverse;
+    border-radius: inherit;
+}
+
+.widgetBannerInner {
+    width: 100%;
+    @include flexbox();
+    justify-content: space-between;
+}
+
+.paymentMetaItem {
+    @include flexbox();
+    
+    + .paymentMetaItem {
+        margin-top: 4px;
+    }
+}
+
+.widgetInfoRow {
+    font-size: 12px;
+    clear: both;
+    margin-bottom: 30px;
+
+    @include MQ-MAX(S) {
+        .bannerInnerRight {
+            margin-top: 20px;
+        }
+    }
+}
+
+.supLinkItem {
+    color: $border_grey_dark;
+    text-decoration: underline;
+}
+
+.metaItemLabel {
+    font-weight: 700;
+    text-align: right;
+    color: $color_text;
+
+    @include MQ(S) {
+        flex-basis: 50%;
+    }
+}
+
+.metaItemValue {
+    flex-shrink: 0;
+    padding-left: 10px;
+    color: $color_text_gray;
+
+    .priceCalcItem & {
+        padding-left: 0;
+        padding-right: 20px;
+        flex-basis: 50%;
+    }
+}
+
+.priceCalcItem {
+    padding: 10px 0;
+    text-align: right;
+    font-size: 14px;
+    @include flexbox();
+}
+
+.textHighlight {
+    background-color: $brand_black;
+    color: $color_white;
+    padding: 5px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+}
+
+.table {
+    margin-bottom: 0;
+    
+    > thead, tbody, tfoot {
+        >tr {
+            >td, >th {
+                color: inherit;
+                border: none;
+                padding: 8px 10px;
+                vertical-align: middle;
+            } 
+        }
+    }
+    
+    > thead {
+        > tr > th {
+            border-bottom: 1px solid $border_grey;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            color: $border_grey_dark;
+
+            .widgetInfoTable & {
+                border-bottom: none;
+                text-transform: initial;
+                font-weight: 400;
+                padding-bottom: 0;
+            }
+
+            .accordionTable & {
+                border-bottom: none;
+                color: $color_text_gray;
+            }
+        }
+    }
+
+    .table {
+        background-color: transparent;
+    }
+}
+
+.shadedTableHeader {
+    background-color: $color_white;
+}     
+
+.table_description {
+    min-width: 250px;
+    position: relative;
+}
+
+.table-responsive {
+    border: none;
+
+    @include MQ(L) {
+        overflow: visible;
+    }
+}
+
+.table-hover {
+    >tbody > tr {
+        cursor: pointer;
+        font-size: 14px;
+        background-color: white;
+        border-bottom: 1px solid $color_white;
+        @include transition(all .4s ease-in-out 0s);
+        
+        &:hover {
+            background-color: $color_white;
+        }
+    }
+}
+
+// Widget Calculator
+.wcCalculator {
+    clear: both;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.wcCalculatorControls {
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.wcCalculatorInfoWidget {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.wcCalculatorInfoStatBox {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+
+    @include MQ(M) {
+        padding: 40px 50px;
+    }
+}
+
+.statSnippetRow {
+    display: block;
+    padding: 30px 0;
+}
+
+.statSnippetMain {
+    border-top: 1px solid $border_grey_light;
+    border-bottom: 1px solid $border_grey_light;
+}
+
+.statLabel {
+    color: $color_grey_dark;
+    font-size: 16px;
+    display: inline-block;
+
+    .title & {
+        margin-left: 5px;
+    }
+}
+
+// New invoice Layout
+
+.invoicePanel {
+    margin-bottom: 10px;
+}
+
+.invoiceHeaderRow {
+    //display: block;
+    width: 100%;
+    padding: 5px ;
+    background-color: $brand_inverse;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &.collapsed { 
+        border: 1px solid $border_grey_light;
+        background-color: white;
+    }
+
+    &:hover, &:focus {
+        background-color: $brand_inverse;
+        border-color: transparent;
+    }
+}
+
+.expandIndicator {
+    padding: 4px;
+    border-radius: 10px;
+    fill: $color_grey_dark;
+    display: inline-block;
+    background-color: $border_grey;
+    @include transform(rotate(180deg));
+    @include transition(transform .4s ease-in-out 0s);
+
+    .collapsed & {
+        background-color: $border_grey_light;
+        @include transform(rotate(0deg));
+        @include transition(transform .4s ease-in-out 0s);
+    }
+}
+
+.invoicePanelBody {
+    padding: 20px 0;
+
+    @include MQ(M) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.innerContent_Sup {
+    @include flexbox();
+
+    @include MQ-MAX(M) {
+        margin-top: 20px;
+        border-top: 1px solid $border_grey_light;
+        padding-top: 20px;
+    }
+
+    @include MQ(M) {
+        border-left: 1px solid $border_grey_light;       
+        flex-direction: column;
+    }
+}
+
+@include MQ(M) {
+    .invoiceHeaderRow > td{
+        width: 200px;
+
+        &.col_anchor {
+            min-width: 300px;
+        }
+    }
+}

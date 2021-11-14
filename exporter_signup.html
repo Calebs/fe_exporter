@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Exporter Signup | Front Edge Limited</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/base.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body>
+
+    <div class="modal fade" id="signupFeedback">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                </header>
+                <div class="modal-body">
+                    <div class="centered text-center">
+                        <h2 class="title title_sm font-black text-style-italics margin_bottom_x color__black">Confirm Details</h2>
+                        <p>Are the following information correct about your business?</p>
+
+                        <div class="infoSummary_hr margin_top_md">
+                            <div class="infoSummaryItem">
+                                <div class="summaryLabel">
+                                    <span class="font-bold font-sm color__grey_dark">Account Name</span>
+                                </div>
+                                <div class="summaryValue text-right">
+                                    <span class="color__black font-default">Nnamdi Chukwu Exp. Co.</span>
+                                </div>
+                            </div>
+                            <div class="infoSummaryItem">
+                                <div class="summaryLabel">
+                                    <span class="font-bold font-sm color__grey_dark">Email Address</span>
+                                </div>
+                                <div class="summaryValue text-right">
+                                    <span class="color__black font-default">nn_chukwu@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="infoSummaryItem">
+                                <div class="summaryLabel">
+                                    <span class="font-bold font-sm color__grey_dark">Phone Number</span>
+                                </div>
+                                <div class="summaryValue text-right">
+                                    <span class="color__black font-default">2348045557830</span>
+                                </div>
+                            </div>
+                            <div class="infoSummaryItem">
+                                <div class="summaryLabel">
+                                    <span class="font-bold font-sm color__grey_dark">Act. Status</span>
+                                </div>
+                                <div class="summaryValue text-right">
+                                    <span class="color__black font-default">Active</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section_cto">
+                            <button type="button" data-dismiss="modal" class="btn btn-sm btn-default-outline">Reject Details</button>
+                            <a href="exporter_onboarding_0.html" class="btn btn-primary btn-sm">Confirm Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="alert alert-danger hidden fade show alert-dismissible" role="alert">
+        <div class="alertWrapper">
+            <div class="alertInfo">
+                <p class="">An error occured while trying to create your account, Please try again later</p>
+            </div>
+            <button type="button" class="close_dialog" data-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <main class="mainContentArea padding-top-none">
+        <div class="section_block">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-md-3 col-md-6">
+                        <div class="LogoHolder text-center">
+                            <a href="index.html" class="">
+                                <img src="img/logo.svg" alt="Front Edge Limited">
+                            </a>
+                        </div>
+                        <div class="formPanel">
+                            <div class="section_header text-center">
+                                <h3 class="title title_lg font-black text-style-italics color__black">Connect your Bank</h3>
+                                <p class="font-regular color__default">Please log into your online banking portal to continue</p>
+                            </div>
+                            <div class="infoBanner bg__off_white margin_bottom_md"> 
+                                <div class="infoBannerWrapper">
+                                    <div class="infoBannerIcon">
+                                        <i class="cust_icon icon_sm icon_info_filled"></i>
+                                    </div>
+                                    <div class="infoBannerContent">
+                                        <h4 class="title color__black font-black margin_bottom_x">We need your bank details to:</h4>
+                                        <ul class="infoItemList">
+                                            <li class="infoListItem"><span>Verify your business information like name, address and credit score</span></li>
+                                            <li class="infoListItem"><span>Validate incoming payments from your buyers</span></li>
+                                            <li class="infoListItem"><span>Receive payments from Frontedge.</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <form action="">
+                                <div class="form-group">
+                                    <label class="control-label font-black color__black required">Bank Name</label>
+                                    <select class="form-control">
+                                        <option>Access Bank PLC</option>
+                                        <option>United Bank of Africa</option>
+                                        <option>Guarantee Trust Bank</option>
+                                        <option>First Bank of Nigeria</option>
+                                        <option>Union Bank</option>
+                                        <option>Unity Bank</option>
+                                        <option>Providus Bank</option>
+                                        <option>Zenith Bank</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label font-black color__black required">Account Number</label>
+                                    <input type="text"  class="form-control" placeholder="Enter a 10 digit account number">
+                                </div>
+                                <div class="primaryActionHolder">
+                                    <button type="button" class="btn btn-block btn-secondary btn-lg" data-toggle="modal" data-target="#signupFeedback">Verify Details</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="imageBlob logoBgPattern"></div>
+    </main>
+
+	<script src="js/jquery.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

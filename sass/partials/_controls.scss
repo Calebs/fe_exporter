@@ -1,0 +1,269 @@
+.contentFilterBtn {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: white;
+    border: 1px solid $border_grey;
+    border-radius: 25px;
+    color: $color_text;
+
+    &:hover, &:focus {
+        background-color: $border_grey_light;
+        color: $brand_black;
+    }
+}
+
+.snipTrend{
+    display: none;
+    padding-top: 10px;
+    display: block;
+
+    &::before {
+        content: "";
+        margin-right: 2px;
+        display: inline-block;
+        font-size: 1.5em;
+        line-height: 1;
+    }
+    
+    &.trendUp{
+        color: $color_green;
+
+        &::before {
+            content: "+";
+        }
+    }
+    
+    &.trendDown{
+        color: $color_red;
+        
+        &::before {       
+            content: "-";
+        }
+    }
+}
+
+.tabelControl {
+    display: inline-block;
+
+    + .tabelControl {
+        margin-left: 1.5rem;
+    }
+}
+
+.tableControlBtn {
+    padding: 8px 14px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: $color_white;
+    color: $color_grey_dark;
+    fill: $border_grey_dark;
+    @include transition(all .4s ease-in-out);
+
+    .cust_icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    &:hover, &:focus {
+        background-color: $brand_inverse;
+        color: $brand_black;
+        fill: $brand_primary;
+    }
+}
+
+.labelTag {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    color: $border_grey_dark;
+    white-space: nowrap;
+}
+
+.labelTagPrimary {
+    color: $brand_primary;
+}
+
+.labelTagSecondary {
+    color: $brand_accent;
+}
+
+.labelTagDanger {
+    color: $color_red;
+}
+
+.labelTagNeutral {
+    color: $color_text;
+}
+
+.labelTagSuccess {
+    color: $color_green;
+}
+
+.labelTagInfo {
+    color: darken($brand_primary, 15);
+}
+
+.fileUploadWidgetToggle {
+    display: block;
+    width: 100%;
+    padding: 40px 50px;
+    min-height: 150px;
+    cursor: pointer;
+    border: 1px dashed $border_grey;
+    background-color: white;
+    border-radius: 10px;
+    color: $color_grey_dark;
+    margin-bottom: 10px;
+    @include transition(all .4s ease-in-out 0s);
+
+    &:hover, &:focus {
+        border-color: $brand_primary;
+        background-color: $brand_inverse;
+    }
+}
+
+.uploadedFilePreview {
+    max-width: 370px;
+    border: 1px solid $border_grey_light;
+    padding: 10px;
+    border-radius: 10px;
+    @include flexbox();
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profileStatMeta {
+    padding: 0 15px;
+
+    @include MQ-MAX(S) {
+        width: 50%;
+        flex-basis: 50%;
+    }
+}
+
+.profileManagementOptions {
+    @include flexbox();
+    flex-shrink: 0;
+}
+
+.bubbleControlItem + .bubbleControlItem {
+    margin-left: 30px;
+}
+
+.bubbleControlBtn {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    color: $color_text_gray;
+    font-weight: 700;
+
+    &:hover, :focus {
+        color: $brand_black;
+
+        .bubbleControlTile {
+            background-color: $color_white;
+        }
+    }
+}
+
+.tileLabel {
+    margin-top: 10px;
+    display: block;
+}
+
+.bubbleControlTile {
+    @include flexbox();
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $brand_inverse;
+    @include transition(all, .4s ease-in-out 0s);
+
+    .contactItem &{
+        width: 32px;
+        height: 32px;
+        background-color: #DBEEF8;
+    }
+}
+
+.panelContentFilterItem {
+    margin-bottom: 20px;
+}
+
+.pageBannerControl {
+    @include flexbox();
+}
+
+.bannerControlItem {
+    display: inline-block;
+
+    + .bannerControlItem {
+        margin-left: 30px;
+    }
+}
+
+.bannerControlBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: inherit;
+
+    &:hover, &:focus {
+        opacity: .75;
+        color: inherit;
+    }
+
+    > * + * {
+        margin-left: 10px;
+    }
+}
+
+.widgeChartHolder {
+    clear: both;
+    display: block;
+    padding: 15px 0;
+}
+
+// Multiselect Plugin
+
+// Chosen
+
+.chosen-container {
+    display: block;
+    width: 100% !important;
+}
+
+.chosen-container-multi {
+    .chosen-choices {
+        padding: 8px 15px;
+        border: 1px solid $border_grey;
+        background-image: unset;
+        border-radius: 5px;
+        font-size: 12px;
+
+        li.search-choice {
+            border-color: transparent;
+            background-color: $brand_inverse;
+            padding: 8px 30px 8px 15px;
+            border-radius: 5px;
+            background-image: unset;
+            color: $color_text;
+
+            .search-choice-close {
+                background-position: -42px 0px;
+                top: 10px;
+                right: 5px;
+            }
+        }
+    }
+}

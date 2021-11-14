@@ -1,0 +1,202 @@
+%hero_background {
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero_area {
+    @extend %hero_background;
+    min-height: 380px;
+    
+    @include MQ(M) {
+        min-height: 100%;
+    }
+
+    .container {
+        z-index: 10;
+    }
+}
+
+.imageBlob {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.logoBgPattern {
+    background-image: url(../img/banners/logo_bg_grey.svg);
+}
+
+.heroContentWrapper {
+    min-height: 65vh;
+    padding: 150px 0 70px;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+    @include MQ(M) {
+        padding-bottom: 150px;
+    }
+}
+
+.heroBannerImage {
+    display: block;
+
+    @include MQ(M) {
+        position: absolute;
+        @include center(y);
+        right: 0;
+    }
+}
+
+.infoBlobImage {
+    max-width: 770px;
+}
+
+.hero_title {
+    font-size: 32px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    @include break-inside(avoid);
+    
+    @include MQ(M) {
+        font-size: 48px;
+    }
+}
+
+.bannerHeader {
+    clear: both;
+    padding: 30px 0 0;
+    position: relative;
+}
+
+.hero_blub {
+    font-size: 18px;
+    color: inherit;
+
+    @include MQ(M) {
+        font-size: 21px;
+    }
+}
+
+.imageItemHolder {
+    padding-bottom:20px;
+
+    img {
+        display: inline-block;
+        max-width: 370px;
+        width: 100%;
+    }
+
+    @include MQ(M) {
+        padding: 0 30px
+    }
+}
+
+.logo_grid {
+    display: grid;
+    @include flexbox();
+    width: 100%;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    justify-content: center;
+}
+
+.logo_item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+
+    + .logo_item {
+        margin-left: 30px;
+    }
+    
+    img {
+        display: block;
+        height: 40px;
+        width: auto;
+    }
+
+    @include MQ-MAX(S) {
+        flex-basis: 85px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.grey_scaled {
+    @include filter(grayscale(1));
+    @include transition(filter .4s ease-in-out 0s, opacity .4s ease-in-out 0s);
+    opacity: .3;
+
+    &:hover, &:focus {
+        opacity: 1;
+        @include filter(grayscale(0));
+    }
+}
+
+// How to row
+
+.featureThumbItem {
+    margin-bottom: 30px;
+}
+
+.featureThumbWrapper {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+
+.featureFig {
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.featFigureImage {
+    width: 100%;
+    display: inline-block;
+
+    @include MQ-MAX(M) {
+        img {
+            max-width: 256px;
+        }
+    }
+}
+
+.featureTitle {
+    font-size: 18px;
+}
+
+.figCount {
+    width: 48px;
+    height: 48px;
+    background-color: $brand_black;
+    color: $brand_inverse;
+    font-size: 18px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+}

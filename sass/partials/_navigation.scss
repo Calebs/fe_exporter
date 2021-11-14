@@ -1,0 +1,462 @@
+a {
+    text-decoration: none;
+    @include transition(all .6s ease-in-out);
+    color: inherit;
+    
+    &:hover,
+    &:focus {
+        color: $brand_accent;
+        text-decoration: none;
+    }
+    
+    &:focus {
+        outline: thin dotted $brand_accent;
+        .no-touch & {
+            outline: none;
+        }
+    }
+}
+
+a:link,
+button {
+    -webkit-tap-highlight-color: rgba($brand_accent, .35);
+    -moz-tap-highlight-color: rgba($brand_accent, .35);
+}
+
+button {
+    outline: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    width: auto;
+    height: auto;
+    color: inherit;
+    background: 0 0;
+    cursor: pointer;
+    text-align: center;
+    @include transition(all .6s ease-in-out);
+
+    &:focus, &:visited {
+        outline: none;
+    }
+}
+
+.btn {
+    border-radius: 30px;
+    padding: 1em 2em;
+    font-size: 12px;
+    font-weight: 900;
+    background-color: transparent;
+    color: $color_white;
+    fill: $color_white;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    box-shadow: 0px 0px 0px transparent;
+    @include transition(all .6s ease-in-out);
+    text-decoration: none !important;
+    will-change: background-color, color;
+    
+    + [class *="btn"], + [class *="Btn"] {
+        margin-left: 1.5rem;
+
+        &.btn-block {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+    }
+
+    > * + * {
+        margin-left: 10px;
+    }
+ 
+    @include MQ(M) {
+        min-width: 100px;
+        font-size: 1em;
+    }
+    
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+        .no-touch & {
+            outline: none;
+        }
+    }
+
+    &[disabled], &.disabled {
+        pointer-events:none;
+        color: $color_white;
+        background-color: $border_grey_dark;
+    }
+}
+
+.btnIcon {
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: .75;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+    &:hover, &:hover {
+        background-color: $brand_inverse;
+        opacity: 1;
+    }
+}
+
+.btnNav {
+    color: $brand_primary;
+    background-color: white;
+    fill: $brand_primary;
+
+    &:hover, &:focus {
+        background-color: $brand_primary;
+        color: $color_white;
+        fill: $color_white;
+    }
+}
+
+.btn-default {
+    background-color: transparent;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+        background-color: $border_grey_light;
+        color: $brand_black;
+    }
+}
+
+.btn-default-danger {
+    background-color: transparent;
+    color: $color_red;
+
+    &:hover,
+    &:focus {
+        background-color: $border_grey_light;
+        color: $brand_black;
+    }
+}
+
+.btn-primary-outline {
+    background-color: $brand_inverse;
+    color: $brand_black;
+    fill: $brand_black;
+    border: 1px solid $brand_primary;
+
+    &:hover, &:focus {
+        color: $brand_inverse;
+        fill: $brand_inverse;
+        background-color: $brand_primary;
+        border-color: transparent;
+    }
+}
+
+.btn-default-outline {
+    background-color: white;
+    color: $color_text;
+    fill: $color_text;
+    border: 1px solid $color_text;
+
+    &:hover, &:focus {
+        background-color: $border_grey_light;
+        border-color: transparent;
+    }
+}
+
+.btn-primary {
+    background-color: $brand_primary;
+    color: $color_white;
+    fill: white;
+
+    &:hover,
+    &:focus {
+        background-color: white;
+        color: $brand_primary;
+        border: 1px solid $brand_primary;
+    }
+}
+
+.btn-primary-ghost {
+    background-color: transparent;
+    color: $brand_primary;
+    fill: $brand_primary;
+
+    &:hover, &:focus {
+        color: $brand_inverse;
+        fill: $brand_inverse;
+        background-color: $brand_primary;
+    }
+}
+
+.btn-secondary {
+    background-color: $brand_black;
+    color: $color_white;
+    fill: $brand_inverse;
+
+    &:hover,
+    &:focus {
+        background-color: $brand_primary;
+        color: $color_white;
+    }
+}
+
+.btn-danger {
+    color: $brand_black;
+    background-color: $color_red_inverse;
+
+    &:hover, &:focus {
+        background-color: $color_red;
+        color: $color_white;
+    }
+}
+
+.btn-sm.btn,
+.btn-group-sm>.btn {
+    font-size: 12px;
+    
+    @include MQ-MAX(S) {
+        padding: 1em;
+    }
+}
+
+.btn-lg.btn,
+.btn-group-lg>.btn {
+    font-size: 16px;
+}
+
+.btn-link {
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+
+    > * + * {
+        margin-left: 10px;
+    }
+        
+    &:hover,
+    &:focus {
+        opacity: 1;
+        color: inherit;
+        fill: $brand_primary;
+        text-decoration: none;
+    }
+    
+    &:active, &[disabled] {
+        color: $border_grey_dark;
+        fill: $border_grey_dark;
+        outline: none;
+    }
+}
+
+.dialogDismiss {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    display: flex;
+    z-index: 1000;
+}
+
+.close_dialog {
+    z-index: 5;
+    width: 32px;
+    height: 32px;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    background-color: $border_grey_light;
+
+    .alert & {
+        background-color: transparent;
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        width: 1.5px;
+        background: rgba($brand_black, .4);
+        height: 14px;
+        top: 50%;
+        left: 50%;
+        margin: -7px 0 0 -1px;
+    }
+    &::before {
+        @include transform(rotate(-45deg));
+    }
+    &::after {
+        @include transform(rotate(45deg));
+    }
+    &:hover,
+    &:focus {
+        background-color: $border_grey_light;
+        &::before,
+        &::after {
+            background-color: $color_red;
+        }
+    }
+}
+
+.contentNavMain {
+    clear: both;
+}
+
+.pageSubNav {
+    padding: 5px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border: 1px solid rgba($color_white, .5);
+    border-radius: 35px;
+}
+
+.pageSubNavItem, .secondaryNavItem {
+    line-height: 1;
+
+    + .pageSubNavItem, + .secondaryNavItem {
+        margin-left: 10px;
+    }
+}
+
+.pageSubNavLink {
+    padding: 10px 15px;
+    display: inline-block;
+    font-weight: 900;
+    font-style: italic;
+    color: $border_grey_dark;
+    font-size: 12px;
+    border-radius: 30px;
+    background-color: transparent;
+
+    @include MQ(M) {
+        font-size: 16px;
+    }
+
+    .active & {
+        color: $brand_black;
+        background-color: $brand_primary;
+    }
+
+    &:hover, &:focus {
+        color: $brand_inverse;
+    }
+}
+
+.pageNavSecondary {
+    clear: both;
+    border-bottom: 1px solid $border_grey_light;
+}
+
+.secondaryNavLink {
+    padding: 15px 5px;
+    display: block;
+    font-weight: 700;
+    color: $color_grey_dark;
+    font-size: 13px;
+
+    .active &, &.active {
+        color: $brand_black;
+        box-shadow: inset 0 -2px 0 $brand_black;
+    }
+
+    &:hover, &:focus {
+        color: $brand_black;
+    }
+}
+
+.navItemCount {
+    display: inline-block;
+    padding: 7px 7px;
+    text-align: center;
+    background-color: $border_grey_light;
+    color: $color_grey_dark;
+    font-size: .85em;
+    margin-left: 5px;
+    border-radius: 20px;
+}
+
+/* pager */
+.pager {
+    display: block;
+    @include clearfix;
+
+    >* {
+        vertical-align: middle;
+        display: inline-block;
+    }
+}
+
+.pager_item {
+    display: inline-block;
+    margin-right: 10px;
+
+    a {
+        display: block;
+        padding: 4.5px 12px;
+        border-radius: 40px;
+        text-transform: capitalize;
+        color: $color_text_gray;
+
+        &:hover {
+            
+            background-color: $border_grey_light;
+        }
+    }
+    &.active a {
+        pointer-events: none;
+        font-weight: 700;
+        color: $brand_black;
+        background-color: $border_grey_light;
+    }
+}
+
+.breadcrumb {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    align-items: center;
+
+    > .active {
+        pointer-events: none;
+        color: $brand_primary;
+    }
+}
+
+.breadcrumb-item {
+    color: inherit;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    letter-spacing: -0.015em; 
+    
+    + .breadcrumb-item {
+        &::before {
+            margin: 0 5px;
+            content: "";
+            height: 20px;
+            width: 20px;
+            display: inline-flex;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(../img/icons/chevron_left_brc.svg);
+        }
+    }
+}
