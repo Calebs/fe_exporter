@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Add a Buyer | Front Edge</title>
+    <title>New Invoice | Front Edge</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,30 +19,6 @@
 </head>
 
 <body class="bg__off_white">
-
-    <div class="modal fade" id="buyerAdded">
-        <div class="modal-dialog modal-sm modal-dialog-centered">
-            <div class="modal-content">
-                <header class="modal-header">
-                </header>
-                <div class="modal-body">
-                    <div class="centered text-center">
-                        <div class="promptImageHolder centered">
-                            <img src="./img/icons/action_success.svg" alt="">
-                        </div>
-                        <h2 class="title title_sm font-black text-style-italics margin_bottom_sm color__black">Congratulations</h2>
-                        <p>Buyer <strong>Nkem and Sons</strong> has been approved for export financing to a limit of $300,000.</p>
-                        <div class="section_cto">
-                            <button type="button" data-dismiss="modal" class="btn btn-default">Done</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    
-                </div>
-            </div>
-        </div>
-    </div>
 
     <header role="banner" class="">
         <div class="container">
@@ -58,7 +34,7 @@
                 </div>
                 <div class="navbarGroupItem navBarItemRight">
                     <nav class="navMenu menuAlt">
-                        <a href="buyers.html" class="btn btn-sm btn-default-outline">
+                        <a href="invoices.html" class="btn btn-sm btn-default-outline">
                             <span class="btnIcon">
                                 <svg class="cust_icon icon_xs" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.4099 12.0002L17.7099 7.71019C17.8982 7.52188 18.004 7.26649 18.004 7.00019C18.004 6.73388 17.8982 6.47849 17.7099 6.29019C17.5216 6.10188 17.2662 5.99609 16.9999 5.99609C16.7336 5.99609 16.4782 6.10188 16.2899 6.29019L11.9999 10.5902L7.70994 6.29019C7.52164 6.10188 7.26624 5.99609 6.99994 5.99609C6.73364 5.99609 6.47824 6.10188 6.28994 6.29019C6.10164 6.47849 5.99585 6.73388 5.99585 7.00019C5.99585 7.26649 6.10164 7.52188 6.28994 7.71019L10.5899 12.0002L6.28994 16.2902C6.19621 16.3831 6.12182 16.4937 6.07105 16.6156C6.02028 16.7375 5.99414 16.8682 5.99414 17.0002C5.99414 17.1322 6.02028 17.2629 6.07105 17.3848C6.12182 17.5066 6.19621 17.6172 6.28994 17.7102C6.3829 17.8039 6.4935 17.8783 6.61536 17.9291C6.73722 17.9798 6.86793 18.006 6.99994 18.006C7.13195 18.006 7.26266 17.9798 7.38452 17.9291C7.50638 17.8783 7.61698 17.8039 7.70994 17.7102L11.9999 13.4102L16.2899 17.7102C16.3829 17.8039 16.4935 17.8783 16.6154 17.9291C16.7372 17.9798 16.8679 18.006 16.9999 18.006C17.132 18.006 17.2627 17.9798 17.3845 17.9291C17.5064 17.8783 17.617 17.8039 17.7099 17.7102C17.8037 17.6172 17.8781 17.5066 17.9288 17.3848C17.9796 17.2629 18.0057 17.1322 18.0057 17.0002C18.0057 16.8682 17.9796 16.7375 17.9288 16.6156C17.8781 16.4937 17.8037 16.3831 17.7099 16.2902L13.4099 12.0002Z" fill="#555555"/>
@@ -72,41 +48,79 @@
         </div>
     </header>
 
-    <div class="alert alert-danger fade show hidden alert-dismissible" role="alert">
-        <div class="alertWrapper">
-            <div class="alertInfo">
-                <p class="">An error occured</p>
-            </div>
-            <button type="button" class="close_dialog" data-dismiss="alert" aria-label="Close"></button>
-        </div>
-    </div>
-
     <main class="mainContentArea ">
         <div class="section_block">
             <div class="container">
                 <div class="row">
                     <div class="offset-md-3 col-md-6">
+                        <div class="formStepsWidget formStepHr">
+                            <div class="formStepIndicatorItem stepActive">
+                                <div class="stepIndicatorNode">
+                                    <div class="stepProgressIcon">
+                                        <i class="cust_icon icon_done"></i>
+                                    </div>
+                                    <span class="IndicatorNodeCount">01</span>
+                                </div>
+                                <div class="stepIndicatorDetails">
+                                    <span>Details</span>
+                                </div>
+                            </div>
+                            <div class="formStepIndicatorItem ">
+                                <div class="stepIndicatorNode">
+                                    <div class="stepProgressIcon">
+                                        <i class="cust_icon icon_done"></i>
+                                    </div>
+                                    <span class="IndicatorNodeCount">02</span>
+                                </div>
+                                <div class="stepIndicatorDetails">
+                                    <span>Documents</span>
+                                </div>
+                            </div>
+                            <div class="formStepIndicatorItem">
+                                <div class="stepIndicatorNode">
+                                    <div class="stepProgressIcon">
+                                        <i class="cust_icon icon_done"></i>
+                                    </div>
+                                    <span class="IndicatorNodeCount">03</span>
+                                </div>
+                                <div class="stepIndicatorDetails">
+                                    <span>Summary</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="formPanel">
-                            <div class="margin_bottom_sm text-center">
-                                <h3 class="title title_md font- color__black">New Buyer</h3>
+                            <div class="section_header text-center">
+                                <h3 class="title title_md font- color__black">Invoice Details</h3>
                             </div>
                             <form action="">
-                                <p class="font-regular color__default margin_bottom_md">Please upload all invoices issued by the new buyer(s) within the last 24 months. This is required to calculate the Buyer’s limit.</p>
                                 <div class="form-group">
-                                    <div class="sampleImageHolder">
-                                        <img src="./img/banners/invoice_template.png" class="sampleImage">
-                                    </div>
-                                    <a href="#" download class="btn btn-sm btn-primary-outline">
-                                        <span class="btnIcon">
-                                            <svg class="cust_icon icon_xs" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00016 8.66683V4.66683L6.00016 2.66683H10.0002L10.0002 4.66683L10.0002 7.3335L10.0002 8.66683H10.8647L8.00016 11.3005L5.13567 8.66683H6.00016ZM11.3335 7.3335L11.3335 4.66683L11.3335 2.66683C11.3335 1.93045 10.7365 1.3335 10.0002 1.3335H6.00016C5.26378 1.3335 4.66683 1.93045 4.66683 2.66683V7.3335H1.3335L8.00016 13.0566L14.6668 7.3335H11.3335ZM12.6668 14.6668C13.4032 14.6668 14.0002 14.0699 14.0002 13.3335H2.00016C2.00016 14.0699 2.59712 14.6668 3.3335 14.6668H12.6668Z"/>
-                                            </svg>
-                                        </span>
-                                        <span class="btnLabel">Download Template</span>
-                                    </a>
+                                    <label class="control-label font-black color__black required">Bank Name</label>
+                                    <select class="form-control">
+                                        <option>Select a Buyer</option>
+                                        <option>Buyer name 1</option>
+                                        <option>Buyer name 2</option>
+                                        <option>Buyer name 3</option>
+                                        <option>Buyer name 4</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label font-black color__black required">Upload Invoice History</label>
+                                    <label class="control-label font-black color__black required">Invoice Value</label>
+                                    <div class="inputaffixed inputPrefixed">
+                                        <div class="inputfixture">
+                                            <svg class="cust_icon icon_xs" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.37425 5.68V6.864H9.76625V8.144H8.37425V12H6.72625L3.75025 4.848V12H2.03825V8.144H0.66225V6.864H2.03825V5.68H0.66225V4.4H2.03825V0.608H3.68625L6.64625 8.048V0.608H8.37425V4.4H9.76625V5.68H8.37425Z" fill="#02BAFF"/>
+                                            </svg>                             
+                                        </div>
+                                        <input type="text" required class="form-control inputControl " placeholder="Enter amount">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label font-black color__black required">Due Date</label>
+                                    <input type="date" required class="form-control" placeholder="Enter amount">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="control-label font-black color__black required">Upload Invoice</label>
                                     <div class="fileUploadWidget margin_top_x">
                                         <label for="fileUploader" class="fileUploadWidgetToggle uploadWidgetMini">
                                             <input type="file" id="fileUploader" hidden>
@@ -120,6 +134,14 @@
                                                 </div>
                                             </div>
                                         </label>
+                                        <a href="#" download class="btn btn-sm btn-default">
+                                            <span class="btnIcon">
+                                                <svg class="cust_icon icon_xs" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00016 8.66683V4.66683L6.00016 2.66683H10.0002L10.0002 4.66683L10.0002 7.3335L10.0002 8.66683H10.8647L8.00016 11.3005L5.13567 8.66683H6.00016ZM11.3335 7.3335L11.3335 4.66683L11.3335 2.66683C11.3335 1.93045 10.7365 1.3335 10.0002 1.3335H6.00016C5.26378 1.3335 4.66683 1.93045 4.66683 2.66683V7.3335H1.3335L8.00016 13.0566L14.6668 7.3335H11.3335ZM12.6668 14.6668C13.4032 14.6668 14.0002 14.0699 14.0002 13.3335H2.00016C2.00016 14.0699 2.59712 14.6668 3.3335 14.6668H12.6668Z" fill="#353535"/>
+                                                </svg>
+                                            </span>
+                                            <span class="btnLabel">Download invoice Template</span>
+                                        </a>
                                     </div>
                                     <div class="uploadedFilePreview hidden">
                                         <div class="media_item">
@@ -140,9 +162,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+                                                                
                                 <div class="section_cto text-center">
-                                    <button type="button" data-target="#buyerAdded" data-toggle="modal" class="btn btn-secondary">Continue</button>
+                                    <button type="button" class="btn btn-secondary">Continue</button>
                                 </div>
                             </form>
                         </div>

@@ -31,6 +31,13 @@
 
     @include MQ(M) {
         flex-direction: column;
+
+        &.formStepHr {
+            margin-bottom: 30px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: row;
+        }
     }
 }
 
@@ -55,6 +62,17 @@
 
         + .formStepIndicatorItem {
             margin-top: 60px;
+        }
+
+        .formStepHr & {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            + .formStepIndicatorItem {
+                margin-top: 0;
+                margin-left: 80px;
+            }
         }
     }
 
@@ -100,11 +118,24 @@
             bottom: -60px;
             @include center(x);
             border-left: 2px dashed $border_grey;
+
+            .formStepHr & {
+                width: 90px;
+                left: 50px;
+                @include center(y);
+                border-top: 2px dashed $border_grey;
+                border-left: none;
+                height: 0;
+            }
         }
     }
 
     @include MQ(M) {
         margin-right: 10px;
+
+        .formStepHr & {
+            margin-right: 0;
+        }
     }
 
     .stepCompleted & {
@@ -150,6 +181,11 @@
     @include MQ(M) {
         font-size: 16px;
         padding-top: 0;
+
+        .formStepHr & {
+            padding-top: 10px;
+            font-size: 14px;
+        }
     }
 }
 
@@ -293,5 +329,81 @@
     a {
         display: inline-block;
         padding: 7.5px 0;
+    }
+}
+
+// Document Comments
+
+.postItem {
+    display: block;
+    padding: 15px 0;
+
+    + .postItem {
+        border-top: 1px solid $border_grey_light;
+    }
+}
+
+.postItemWrapper {
+    @include flexbox();
+    align-items: flex-start;
+    width: 100%;
+}
+
+.postAuthAvi {
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.postAutorInfo {
+    @include flexbox();
+    align-items: center;
+    font-size: 13px;
+}
+
+.postAutorName {
+    font-size: 16px;
+    color: $brand_black;
+    font-weight: 700;
+}
+
+.postFormWiget{
+    width: 100%;
+    border: 1px solid $border_grey;
+    position: relative;
+    border-radius: 10px;
+}
+
+.postInput {
+    display: block;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    padding-right: 80px;
+    width: 100%;
+    border-radius: inherit;
+
+    &:focus {
+        outline-color: $brand_primary;
+    }
+}
+
+.postBtnHolder {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.postButton {
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 17px;
+    padding: 5px 12px;
+    color: $brand_primary;
+
+    &:hover, &:focus {
+        background-color: $brand_inverse;
+        color: $brand_accent;
     }
 }

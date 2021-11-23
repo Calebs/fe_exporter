@@ -7,6 +7,10 @@
     position: relative;
     flex-shrink: 0;
     margin-right: 20px;
+
+    .widgetHeaderTitles & {
+        margin-right: 10px;
+    }
 }
 
 .media_info {
@@ -112,3 +116,4 @@
     text-align: left;
     color: $color_grey_dark;    
 }
+

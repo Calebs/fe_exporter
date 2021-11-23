@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Request Funding | Front Edge</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/base.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body class="bg__off_white">
+
+    <div class="modal Media_ViewerModal fade" id="mediaPreview">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="mediaPreviewer_Wrapper">
+                    <div class="mediaNavigationWrapper">
+                        <header class="mediaViewer_header">
+                            <div class="wigetHeadaerWrapper">
+                                <div class="widgetHeaderTitles">
+                                    <div class="media_item">
+                                        <div class="media_figure">
+                                            <button type="button" data-dismiss="modal" class="mediaViewer_btn">
+                                                <svg class="cust_icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+                                                </svg>                                        
+                                            </button>
+                                        </div>
+                                        <div class="media_info user_info">
+                                            <h5 class="font-default font-bold color__white">0012_techerand_bol.png</h5>
+                                            <span>53 kB</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widgetHeaderControls">
+                                    <button type="button" class="btn btn-danger-outline">Reject</button>
+                                    <button type="button" class="btn btn-default-outline">Approve</button>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="mediaViewer ">
+                            <div class="mediaPreviewFigure tab-content">
+                                <div class="mediaPreviewSlideItem tab-pane fade show active" id="doc_1">
+                                    <figure class="mediaPreviewImage">
+                                        <img src="./img/dummy_slides/dummy_boL.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="mediaPreviewSlideItem tab-pane fade" id="doc_2">
+                                    <figure class="mediaPreviewImage">
+                                        <img src="./img/dummy_slides/dummy_pack_list.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="mediaPreviewSlideItem tab-pane fade" id="doc_3">
+                                    <figure class="mediaPreviewImage">
+                                        <img src="./img/dummy_slides/dummy_cert_insp.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="mediaPreviewSlideItem tab-pane fade" id="doc_4">
+                                    <figure class="mediaPreviewImage">
+                                        <img src="./img/dummy_slides/dummy_NERC.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="mediaPreviewSlideItem tab-pane fade" id="doc_5">
+                                    <figure class="mediaPreviewImage">
+                                        <img src="./img/dummy_slides/dummy_sales_contract.jpg" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mediaNavThumbnails">
+                            <ul class="thumbSlider nav">
+                                <li class="thumbNavItem">
+                                    <a href="#doc_1" class="active thumbNavLink" data-toggle="tab">
+                                        <div class="thumnailHolder">
+                                            <img src="img/dummy_slides/dummy_boL.jpg" alt="">
+                                        </div>
+                                        <span class="thumbnail_label">0012_techerand_bol.png</span>
+                                    </a>
+                                </li>
+                                <li class="thumbNavItem">
+                                    <a href="#doc_2" data-toggle="tab" class="thumbNavLink">
+                                        <div class="thumnailHolder">
+                                            <img src="img/dummy_slides/dummy_pack_list.jpg" alt="">
+                                        </div>
+                                        <span class="thumbnail_label">techerand_packingList.png</span>
+                                    </a>
+                                </li>
+                                <li class="thumbNavItem">
+                                    <a href="#doc_3" data-toggle="tab" class="thumbNavLink">
+                                        <div class="thumnailHolder">
+                                            <img src="img/dummy_slides/dummy_cert_insp.jpg" alt="">
+                                        </div>
+                                        <span class="thumbnail_label">techerand_packingList.png</span>
+                                    </a>
+                                </li>
+                                <li class="thumbNavItem">
+                                    <a href="#doc_4" data-toggle="tab" class="thumbNavLink">
+                                        <div class="thumnailHolder">
+                                            <img src="img/dummy_slides/dummy_NERC.jpg" alt="">
+                                        </div>
+                                        <span class="thumbnail_label">techerand_packingList.png</span>
+                                    </a>
+                                </li>
+                                <li class="thumbNavItem">
+                                    <a href="#doc_5" data-toggle="tab" class="thumbNavLink">
+                                        <div class="thumnailHolder">
+                                            <img src="img/dummy_slides/dummy_sales_contract.jpg" alt="">
+                                        </div>
+                                        <span class="thumbnail_label">techerand_packingList.png</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="MediaCommentsWrapper">
+                        <div class="commentPanel">
+                            <div class="panelWrapper">
+                                <div class="panelHeader ">
+                                    <h4 class="title caps_upper font-black color__black">Comments</h4>
+                                    <article class="uploadedFilePreview margin_top_sm">
+                                        <div class="user_info">
+                                            <h5 class="font-default text_clipped font-bold color__black">techerand_packingList.png</h5>
+                                            <span class="font-sm">Bill of Landing</span>
+                                        </div>
+                                        <div class="bubbleControlItem paneControl">
+                                            <button type="button" class="bubbleControlBtn">
+                                                <div class="bubbleControlTile">
+                                                    <span class="cust_icon icon_download_black"></span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="panelContentInner">
+                                    <h4 class="title color__grey_dark font-bold caps_upper">1 Comments</h4>
+
+                                    <div class="postItem">
+                                        <div class="postItemWrapper">
+                                            <div class="postAuthAvi">
+                                                <div class="userAvi">
+                                                    <img src="./img/Frontedge_Avi.png">
+                                                    <div class="default_avi">FE</div>
+                                                </div>
+                                            </div>
+                                            <div class="PostItemContent">
+                                                <div class="postAutorInfo">
+                                                    <h4 class="postAutorName">Front Edge</h4>
+                                                    <span class="inlineSeparator">•</span>
+                                                    <div class="metaItem">
+                                                        <span class="">12d</span>
+                                                    </div>
+                                                </div>
+                                                <p>This document is not accurate. can you please provide a document that shows a transaction with the buyer in question?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="postItem newPostWidget">
+                                        <div class="postItemWrapper">
+                                            <div class="postFormWiget">
+                                                <textarea rows="1" class="postInput" placeholder="Write a Comment"></textarea>
+                                                <div class="postBtnHolder">
+                                                    <button type="submit" class="postButton">Send</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="rejectPrompt">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">Reject Request</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p class="font-sm margin_bottom_sm">Kindly confirm why you are rejecting this request.</p>
+                    
+                    <form class="content_wrapper">
+                        
+                        <div class="form-group">
+                            <label for="status_active" class="controlSummary">
+                                <input type="radio" checked name="user_status" id="status_active">
+                                <div class="controlSummaryDetails">
+                                    <h5 class="title font-black text-style-italics">Exceeded Limit</h5>
+                                    <p>Invoice value exceeds buyer’s single or total limit</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status_inactive" class="controlSummary">
+                                <input type="radio" name="user_status" id="status_inactive">
+                                <div class="controlSummaryDetails">
+                                    <h5 class="title font-black text-style-italics">Duplicate Request</h5>
+                                    <p>A similar request has been received from the same person</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status_suspend" class="controlSummary">
+                                <input type="radio" name="user_status" id="status_suspend">
+                                <div class="controlSummaryDetails">
+                                    <h5 class="title font-black text-style-italics">Documentation</h5>
+                                    <p>There is an issue verifying the documents submitted</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label text-style-italics font-black">Additional Remark</label>
+                            <textarea class="form-control" rows="3" placeholder="Any other thing you’d like to tell us"></textarea>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-sm btn-default">Cancel</button>
+                    <button type="button" class="btn btn-sm btn-default-outline">Confirm Rejection</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirmRequest">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                </header>
+                <div class="modal-body">
+                    <div class="centered text-center">
+                        <h2 class="title title_sm font-black text-style-italics margin_bottom_sm color__black">Confirm Action</h2>
+                        <p>You are about to approve Nnamdi Chukwu Exp’s request for funding for <strong>$250,000</strong> invoice for <strong>Techerand Investments.</p>
+                        <div class="section_cto">
+                            <button type="button" data-target="#approveSuccess" data-toggle="modal" class="btn btn-secondary">Yes, I Approve it</button>
+                            <div class="margin_top_sm">
+                                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="approveSuccess">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                </header>
+                <div class="modal-body">
+                    <div class="centered text-center">
+                        <div class="promptImageHolder centered">
+                            <img src="./img/icons/action_success.svg" alt="">
+                        </div>
+                        <h2 class="title title_sm font-black text-style-italics margin_bottom_sm color__black">Request Approved</h2>
+                        <p>Nnamdi Chukwu Exp. invoice finance request for Techerand investments has been approved.</p>
+                        <div class="section_cto">
+                            <button type="button" data-dismiss="modal" class="btn btn-default">Done</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header role="banner" class="">
+        <div class="container">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="index.html" class="logo_link">
+                            <img src="img/logo.svg" alt="Front Edge Finance">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <a href="invoices.html" class="btn btn-sm btn-default-outline">
+                            <span class="btnIcon">
+                                <svg class="cust_icon icon_xs" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.4099 12.0002L17.7099 7.71019C17.8982 7.52188 18.004 7.26649 18.004 7.00019C18.004 6.73388 17.8982 6.47849 17.7099 6.29019C17.5216 6.10188 17.2662 5.99609 16.9999 5.99609C16.7336 5.99609 16.4782 6.10188 16.2899 6.29019L11.9999 10.5902L7.70994 6.29019C7.52164 6.10188 7.26624 5.99609 6.99994 5.99609C6.73364 5.99609 6.47824 6.10188 6.28994 6.29019C6.10164 6.47849 5.99585 6.73388 5.99585 7.00019C5.99585 7.26649 6.10164 7.52188 6.28994 7.71019L10.5899 12.0002L6.28994 16.2902C6.19621 16.3831 6.12182 16.4937 6.07105 16.6156C6.02028 16.7375 5.99414 16.8682 5.99414 17.0002C5.99414 17.1322 6.02028 17.2629 6.07105 17.3848C6.12182 17.5066 6.19621 17.6172 6.28994 17.7102C6.3829 17.8039 6.4935 17.8783 6.61536 17.9291C6.73722 17.9798 6.86793 18.006 6.99994 18.006C7.13195 18.006 7.26266 17.9798 7.38452 17.9291C7.50638 17.8783 7.61698 17.8039 7.70994 17.7102L11.9999 13.4102L16.2899 17.7102C16.3829 17.8039 16.4935 17.8783 16.6154 17.9291C16.7372 17.9798 16.8679 18.006 16.9999 18.006C17.132 18.006 17.2627 17.9798 17.3845 17.9291C17.5064 17.8783 17.617 17.8039 17.7099 17.7102C17.8037 17.6172 17.8781 17.5066 17.9288 17.3848C17.9796 17.2629 18.0057 17.1322 18.0057 17.0002C18.0057 16.8682 17.9796 16.7375 17.9288 16.6156C17.8781 16.4937 17.8037 16.3831 17.7099 16.2902L13.4099 12.0002Z" fill="#555555"/>
+                                </svg>                                                                             
+                            </span>
+                            <span class="btnLabel hidden-sm">Exit</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea ">
+        <div class="section_block padding-top-none">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-md-3 col-md-6">
+                        
+                        <div class="section_header text-center">
+                            <h3 class="title title_md font- color__black">Review Request</h3>
+                        </div>
+
+                        <div class="previewSummaryPane">
+                            <div class="paneHeader">
+                                <h4 class="title caps_upper font-bold">Submitted by</h4>
+                                <div class="paneControlTop">
+                                </div>
+                            </div>
+                            <div class="paneInner">
+                                <div class="media_item">
+                                    <div class="media_figure">
+                                        <div class="userAvi">
+                                            <span class="default_avi bg__black">NC</span>
+                                        </div>
+                                    </div>
+                                    <div class="media_info">
+                                        <h4 class="title title_sm font-bold color__black ">Nnamdi Chukwu Exp. Co</h4>
+                                        <span class="font-sm">Exporter</span>
+                                    </div>
+                                </div>
+                                <div class="margin_top_sm font-sm">
+                                    <span class="color__grey_dark">Bank Details:</span> 
+                                    <span class="color__black font-bold" >Access Bank <span>(1122378556)</span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="previewSummaryPane">
+                            <div class="paneHeader">
+                                <h4 class="title caps_upper font-bold">Buyer Details</h4>
+                                <div class="paneControlTop">
+                                </div>
+                            </div>
+                            <div class="paneInner">
+                                <div class="media_item">
+                                    <div class="media_info">
+                                        <h4 class="title title_sm font-bold color__black "></h4>
+                                        <div class="font-sm">
+                                            <span class="color__grey_dark">Bank Details:</span> 
+                                            <span class="color__black font-bold" >Techerand investments</span>
+                                        </div>
+                                        <div class="row margin_top_sm">
+                                            <article class="profileStatMeta">
+                                                <div class="insight_item">
+                                                    <div class="insight_value">
+                                                        <span class="title color__black font-bold">₦250,000</span>
+                                                    </div>
+                                                    <div class="insight_title ">
+                                                        <span class="color__grey_dark">Invoice Value</span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="profileStatMeta">
+                                                <div class="insight_item">
+                                                    <div class="insight_value">
+                                                        <span class="title color__black font-bold">24 Nov, 2021</span>
+                                                    </div>
+                                                    <div class="insight_title ">
+                                                        <span class="color__grey_dark">Due Date</span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="profileStatMeta">
+                                                <div class="insight_item">
+                                                    <div class="insight_value">
+                                                        <span class="title color__black font-bold">₦1,500,000</span>
+                                                    </div>
+                                                    <div class="insight_title ">
+                                                        <span class="color__grey_dark">Buyer Limit</span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="bannerControlItem">
+                                            <button type="button" class="bannerControlBtn">
+                                                <span class="btnLabel">The buyer is qualified for financing</span>
+                                                <span class="btnIcon">
+                                                    <i class="cust_icon icon_xs icon_verified"></i>                                 
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="previewSummaryPane">
+                            <div class="paneHeader">
+                                <h4 class="title caps_upper font-bold">Documentation</h4>
+                                <div class="paneControlTop">
+                                </div>
+                            </div>
+                            <div class="paneInner">
+                                <article class="uploadedFilePreview ">
+                                    <a href="#mediaPreview" data-toggle="modal" data-backdrop="static" class="media_item">
+                                        <div class="media_figure">
+                                            <img src="./img/icons/cardThumb.svg" alt="">
+                                        </div>
+                                        <div class="media_info user_info">
+                                            <h5 class="font-default font-bold color__black">0012_techerand_bol.png</h5>
+                                            <div class="metaList">
+                                                <div class="metaItem">
+                                                    <span>53 kB</span>
+                                                </div>
+                                                <span class="inlineSeparator">•</span>
+                                                <div class="metaItem">
+                                                    <span class="">Bill of Landing</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="profileManagementOptions align-items-center">
+                                        <div class="bubbleControlItem paneControl">
+                                            <button type="button" class="bubbleControlBtn">
+                                                <div class="bubbleControlTile">
+                                                    <span class="cust_icon icon_download_black"></span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>  
+                                </article>
+                                <article class="uploadedFilePreview ">
+                                    <a href="#mediaPreview" data-toggle="modal" data-backdrop="static" class="media_item">
+                                        <div class="media_figure">
+                                            <img src="./img/icons/cardThumb.svg" alt="">
+                                        </div>
+                                        <div class="media_info user_info">
+                                            <h5 class="font-default font-bold color__black">techerand_packingList.png</h5>
+                                            <div class="metaList">
+                                                <div class="metaItem">
+                                                    <span>53 kB</span>
+                                                </div>
+                                                <span class="inlineSeparator">•</span>
+                                                <div class="metaItem">
+                                                    <span class="">Packing List</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="bubbleControlItem paneControl">
+                                        <button type="button" class="bubbleControlBtn">
+                                            <div class="bubbleControlTile">
+                                                <span class="cust_icon icon_download_black"></span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </article>
+                                <article class="uploadedFilePreview ">
+                                    <a href="#mediaPreview" data-toggle="modal" data-backdrop="static" class="media_item">
+                                        <div class="media_figure">
+                                            <img src="./img/icons/cardThumb.svg" alt="">
+                                        </div>
+                                        <div class="media_info user_info">
+                                            <h5 class="font-default font-bold color__black">techerand_inspCert.jpg</h5>
+                                            <div class="metaList">
+                                                <div class="metaItem">
+                                                    <span>53 kB</span>
+                                                </div>
+                                                <span class="inlineSeparator">•</span>
+                                                <div class="metaItem">
+                                                    <span class="">Inspection Certificate</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="bubbleControlItem paneControl">
+                                        <button type="button" class="bubbleControlBtn">
+                                            <div class="bubbleControlTile">
+                                                <span class="cust_icon icon_download_black"></span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </article>
+                                <article class="uploadedFilePreview ">
+                                    <a href="#mediaPreview" data-toggle="modal" data-backdrop="static" class="media_item">
+                                        <div class="media_figure">
+                                            <img src="./img/icons/cardThumb.svg" alt="">
+                                        </div>
+                                        <div class="media_info user_info">
+                                            <h5 class="font-default font-bold color__black">necp_techerand.jpg</h5>
+                                            <div class="metaList">
+                                                <div class="metaItem">
+                                                    <span>53 kB</span>
+                                                </div>
+                                                <span class="inlineSeparator">•</span>
+                                                <div class="metaItem">
+                                                    <span>Nigeria Export Proceed Form</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="bubbleControlItem paneControl">
+                                        <button type="button" class="bubbleControlBtn">
+                                            <div class="bubbleControlTile">
+                                                <span class="cust_icon icon_download_black"></span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </article>
+                                <article class="uploadedFilePreview ">
+                                    <a href="#mediaPreview" data-toggle="modal" data-backdrop="static" class="media_item">
+                                        <div class="media_figure">
+                                            <img src="./img/icons/cardThumb.svg" alt="">
+                                        </div>
+                                        <div class="media_info user_info">
+                                            <h5 class="font-default font-bold color__black">0012_techerand_contract.pdf</h5>
+                                            <div class="metaList">
+                                                <div class="metaItem">
+                                                    <span>53 kB</span>
+                                                </div>
+                                                <span class="inlineSeparator">•</span>
+                                                <div class="metaItem">
+                                                    <span class="">Sales Contract</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="bubbleControlItem paneControl">
+                                        <button type="button" class="bubbleControlBtn">
+                                            <div class="bubbleControlTile">
+                                                <span class="cust_icon icon_download_black"></span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="section_cto text-center">
+                            <button type="button" data-target="#rejectPrompt" data-toggle="modal" class="btn btn-danger-outline">Reject Request</button>
+                            <button type="button" data-target="#confirmRequest" data-toggle="modal" class="btn btn-secondary">Approve Request</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+	<script src="js/jquery.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

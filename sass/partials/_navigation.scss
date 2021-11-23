@@ -173,8 +173,22 @@ button {
     border: 1px solid $color_text;
 
     &:hover, &:focus {
-        background-color: $border_grey_light;
+        background-color: $brand_inverse;
         border-color: transparent;
+        color: $brand_primary;
+    }
+}
+
+.btn-danger-outline {
+    background-color: $color_red_inverse;
+    color: $color_red;
+    fill: $color_red;
+    border: 1px solid $color_red;
+
+    &:hover, &:focus {
+        background-color: $color_red;
+        border-color: transparent;
+        color: $color_white;
     }
 }
 

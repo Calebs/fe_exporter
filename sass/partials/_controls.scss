@@ -119,6 +119,13 @@
     margin-bottom: 10px;
     @include transition(all .4s ease-in-out 0s);
 
+    &.uploadWidgetMini {
+        min-height: auto;
+        padding: 10px 15px;
+        max-width: 370px;
+
+    }
+
     &:hover, &:focus {
         border-color: $brand_primary;
         background-color: $brand_inverse;
@@ -133,6 +140,25 @@
     @include flexbox();
     align-items: center;
     justify-content: space-between;
+
+    + .uploadedFilePreview {
+        margin-top: 10px;
+    }
+
+    .previewSummaryPane & {
+        max-width: 100%;
+        background-color: $color_white;
+        border: none;
+
+        &:hover, &:focus {
+            background-color: $brand_inverse;
+        }
+    }
+
+    .commentPanel & {
+        padding: 0;
+        border: none;
+    }
 }
 
 .profileStatMeta {
